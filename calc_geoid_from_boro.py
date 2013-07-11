@@ -21,5 +21,5 @@ CalcBorotoCountyBlock = """def boroCountyFIPS(boro,tract):
     return 'X' + tract """
 
 arcpy.AddField_management(input_tract_file,new_field_name,field_type,"#","#","#","#","NULLABLE","NON_REQUIRED","#")
-
+#arcpy.AddField_management(input_tract_file,new_field_name+"_int)",field_type,"#","#","#","#","NULLABLE","NON_REQUIRED","#")
 arcpy.CalculateField_management(input_tract_file,new_field_name,CalcBorotoCountyExpr, "PYTHON_9.3",CalcBorotoCountyBlock)
